@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRAG", "SimpleRAG.csproj", "{3E467814-1722-4051-8BBD-51EE3A8ABD6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "azure-ai-search", "azure-ai-search", "{9685738C-9230-4E7E-BDB0-6AC8630D9EC8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\azure-ai-search\ArtisanBread.txt = ..\..\..\azure-ai-search\ArtisanBread.txt
+		..\..\..\azure-ai-search\README.md = ..\..\..\azure-ai-search\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E467814-1722-4051-8BBD-51EE3A8ABD6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E467814-1722-4051-8BBD-51EE3A8ABD6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E467814-1722-4051-8BBD-51EE3A8ABD6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E467814-1722-4051-8BBD-51EE3A8ABD6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83003419-19C9-42DE-B6D3-4679B369DCB4}
+	EndGlobalSection
+EndGlobal
