@@ -11,12 +11,9 @@ This document details how to create a model deployment for the Azure Open AI ser
 
 1. Go to the Azure OpenAI Studio, https://oai.azure.com/
 
-1. Search for `Azure OpenAI` and select it<br/>
-![image](portal-search-openai.png)
-
 1. Create a new model deployment<br/>
-Select the `Deployments` blade.<br/>
 Ensure your `Current resource` is set to your Azure Open AI service, if not select the correct one.<br/>
+Select the `Deployments` blade.<br/>
 Click `+ Deploy model` to create a new deployment.<br/>
 ![image](openai-studio-deployments.png)
 
