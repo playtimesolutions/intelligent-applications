@@ -6,6 +6,12 @@ This document details how to create the Azure AI Search service within the Azure
 
 You must have a valid Azure subscription and relevant role permissions to create Azure AI Search resources.
 
+## Useful links
+
+* [Main Azure AI Search documentation web site](https://learn.microsoft.com/en-us/azure/search)
+* [Vectorize text and images by using the Azure portal](https://learn.microsoft.com/en-us/azure/search/search-get-started-portal-import-vectors)
+* [Manually index Blog storage](https://learn.microsoft.com/en-us/azure/search/search-semi-structured-data)
+
 ## Steps
 
 1. Go to the Azure portal, https://portal.azure.com
