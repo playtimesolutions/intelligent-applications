@@ -1,10 +1,10 @@
-# Intelligent Applications - Create Azure Open AI service
+# Intelligent Applications - Create Azure OpenAI service
 
-This document details how to create the Azure Open AI service within the Azure portal for use with your applications.
+This document details how to create the Azure OpenAI service within the Azure portal for use with your applications.
 
 ## Pre-requisites
 
-You must have a valid Azure subscription and relevant role permissions to create Azure Open AI resources.
+You must have a valid Azure subscription and relevant role permissions to create Azure OpenAI resources.
 
 ## Steps
 
@@ -31,22 +31,22 @@ You must have a valid Azure subscription and relevant role permissions to create
 1. Wait for deployment to complete then click `Go to resource`<br/>
 ![image](portal-create-openai-deploy.png)
 
-1. View your new Azure Open AI service<br/>
+1. View your new Azure OpenAI service<br/>
 ![image](portal-create-openai-resource.png)
 
 
 ## Example projects configuration
 
-In order to use your Azure Open AI service in the example code you will various properties from the service.
+In order to use your Azure OpenAI service in the example code you will various properties from the service.
 
 1. Service URL endpoint<br/>
 This will be used in the `appsettings` configuration for `Endpoint`.<br/>
-Go to your Azure Open AI service and select the `Resource Management` / `Keys and Endpoint` blade.
+Go to your Azure OpenAI service and select the `Resource Management` / `Keys and Endpoint` blade.
 Copy the `Endpoint` to the clipboard which you can use in the sample code.<br/>
 ![image](portal-openai-url.png)
 
 1. Access `KEY`<br/>
 This will be used in the `appsettings` configuration for `ApiKey`.<br/>
-Go to your Azure Open AI service and select the `Resource Management` / `Keys and Endpoint` blade.
+Go to your Azure OpenAI service and select the `Resource Management` / `Keys and Endpoint` blade.
 View and copy either of the `KEY 1` or `KEY 2` to the clipboard which you can use in the sample code.<br/>
 ![image](portal-openai-keys.png)

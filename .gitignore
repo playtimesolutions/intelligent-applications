@@ -401,3 +401,6 @@ FodyWeavers.xsd
 
 # User specific application settings
 **/appsettings.*.json
+
+# Bicep json files
+**/deploy/*.json

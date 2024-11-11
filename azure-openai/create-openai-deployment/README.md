@@ -1,18 +1,18 @@
-# Intelligent Applications - Create Azure Open AI model deploymemt
+# Intelligent Applications - Create Azure OpenAI model deploymemt
 
-This document details how to create a model deployment for the Azure Open AI service within the Azure portal for use with your applications.
+This document details how to create a model deployment for the Azure OpenAI service within the Azure portal for use with your applications.
 
 ## Pre-requisites
 
-1. You must have an Azure Open AI service instance deployed
-1. You must have a valid Azure subscription and relevant role permissions to create Azure Open AI resources
+1. You must have an Azure OpenAI service instance deployed
+1. You must have a valid Azure subscription and relevant role permissions to create Azure OpenAI resources
 
 ## Steps
 
 1. Go to the Azure OpenAI Studio, https://oai.azure.com/
 
 1. Create a new model deployment<br/>
-Ensure your `Current resource` is set to your Azure Open AI service, if not select the correct one.<br/>
+Ensure your `Current resource` is set to your Azure OpenAI service, if not select the correct one.<br/>
 Select the `Deployments` blade.<br/>
 Click `+ Deploy model` to create a new deployment.<br/>
 ![image](openai-studio-deployments.png)
