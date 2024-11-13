@@ -1,5 +1,5 @@
 name: Build .NET Semantic Kernel solution
-run-name: Build .NET Semantic Kernel solution
+run-name: Build .NET Semantic Kernel solution - $GITHUB_REF_NAME
 
 on:
   workflow_call:
