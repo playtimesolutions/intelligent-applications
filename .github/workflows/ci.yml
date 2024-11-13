@@ -28,7 +28,7 @@ jobs:
             semantic_kernel:
               - dotnet/semantic-kernel-samples/**
 
-      - name: Changes detected...
+      - name: Changes detected
         run: |
           echo Semantic Kernel files changed: "${{ steps.changed-files.outputs.semantic_kernel_any_changed }}"
 
@@ -37,6 +37,7 @@ jobs:
 
   build_dotnet_semantic_kernel:
     #if: ${{ changed_files.outputs.semantic_kernel_changed == true }}
+    name: Build .NET Semantic Kernel solution
     needs: check_for_changed_files
     uses: ./.github/workflows/build-dotnet-semantic-kernel.yml
     with:
