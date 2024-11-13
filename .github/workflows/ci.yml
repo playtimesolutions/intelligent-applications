@@ -1,0 +1,43 @@
+name: Continuous integration
+run-name: Continuous integration
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  check_for_changed_files:
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    name: Detect file changes
+    outputs:
+      semantic_kernel_changed: ${{ steps.changed_files.outputs.semantic_kernel_any_changed }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout
+        with:
+          fetch-depth: 0
+
+      - uses: tj-actions/changed-files@v45
+        id: changed_files
+        name: Detect changes
+        with:
+          files_yaml: |
+            semantic_kernel:
+              - dotnet/semantic-kernel-samples/**
+
+      - name: Changes detected
+        run: |
+          echo "Semantic Kernel files changed: ${{ steps.changed_files.outputs.semantic_kernel_any_changed }}"
+
+  build_dotnet_semantic_kernel:
+    if: ${{ needs.check_for_changed_files.outputs.semantic_kernel_changed == 'true' }}
+    name: Build .NET Semantic Kernel solution
+    needs: check_for_changed_files
+    uses: ./.github/workflows/build-dotnet-semantic-kernel.yml
+    with:
+      path: dotnet/semantic-kernel-samples
+      sdk_version: '8.0.404'

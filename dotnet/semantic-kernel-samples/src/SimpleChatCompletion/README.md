@@ -2,9 +2,13 @@
 
 This sample project demonstrates a simple chat bot where prompts and history are sent to Azure OpenAI where the response is then output and added to the chat history.
 
+## Pre-requisites
+
+You must first setup an Azure OpenAI service and create a deployment model such as GPT-3 for LLM usage.
+
 ## Building the application
 
-You must first setup an Azure OpenAI service and add authentication details to configuration.
+Add Azure OpenAI authentication details to configuration.
 1. Copy the `appsettings.json` file to your own user name e.g. `appsettings.AlanTuring.json`
 1. Edit your users settings file adding the configuration required<br/>
 The `ApiKey` must be set - **NEVER ADD THIS TO SOURCE CONTROL!**
