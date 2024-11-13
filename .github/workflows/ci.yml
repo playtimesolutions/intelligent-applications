@@ -11,6 +11,8 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
     name: Detect file changes
+    outputs:
+      semantic_kernel_changed: ${{ steps.changed_files.outputs.semantic_kernel_any_changed }}
     runs-on: ubuntu-latest
 
     steps:
@@ -29,10 +31,7 @@ jobs:
 
       - name: Changes detected
         run: |
-          echo Semantic Kernel files changed: "${{ steps.changed-files.outputs.semantic_kernel_any_changed }}"
-
-    outputs:
-      semantic_kernel_changed: ${{ steps.changed_files.outputs.semantic_kernel_any_changed }}
+          echo "Semantic Kernel files changed: ${{ steps.changed-files.outputs.semantic_kernel_any_changed }}"
 
   output_state:
     needs: check_for_changed_files
@@ -43,8 +42,8 @@ jobs:
 
         name: Output state
         run: |
-          echo state <${{ needs.check_for_changed_files.outputs.semantic_kernel_changed }}>
-          echo OUTPUT1 <$OUTPUT1>
+          echo "state <${{ needs.check_for_changed_files.outputs.semantic_kernel_changed }}>"
+          echo "OUTPUT1 <$OUTPUT1>"
 
   build_dotnet_semantic_kernel:
     if: ${{ needs.check_for_changed_files.outputs.semantic_kernel_changed == 'true' }}
