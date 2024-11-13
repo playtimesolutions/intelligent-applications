@@ -1,0 +1,38 @@
+name: Build .NET Semantic Kernel solution
+run-name: Build .NET Semantic Kernel solution
+
+on:
+  workflow_call:
+    inputs:
+      path:
+        description: Code path to checkout
+        required: true
+        type: string
+      sdk_version:
+        description: .NET SDK version
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Output environment variables
+        run: env | sort
+
+      - uses: actions/checkout@v4
+        name: Checkout
+        with:
+          sparse-checkout: ${{ inputs.path }}
+
+      - uses: actions/setup-dotnet@v4
+        name: Use .NET SDK ${{ inputs.sdk_version }}
+        with:
+          dotnet-version: ${{ inputs.sdk_version }}
+
+      - name: Build solution
+        run: |
+          dotnet restore
+          dotnet build
+        working-directory: ${{ inputs.path }}

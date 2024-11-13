@@ -2,9 +2,17 @@
 
 This sample project demonstrates a simple chat bot combined with retrieval augmented generation from a knowledge store.
 
+## Pre-requisites
+
+You must first setup an Azure OpenAI service and create a deployment model such as GPT-3 for LLM usage.
+
+You will also need to setup Azure AI Search and create an index as a knowledge store.
+For demo purposes you can setup Azure Blob storage, upload the provided document to a container and index the container.
+In order to index the container it will require an embeddings model, something like Azure OpenAI `text-embeddings-ada-002`.
+
 ## Building the application
 
-You must first setup Azure OpenAI and Azure AI Search services and add authentication details to configuration.
+Add Azure OpenAI and Azure AI Search authentication details to configuration.
 1. Copy the `appsettings.json` file to your own user name e.g. `appsettings.AlanTuring.json`
 1. Edit your users settings file adding the configuration required<br/>
 The `ApiKey` must be set - **NEVER ADD THIS TO SOURCE CONTROL!**
