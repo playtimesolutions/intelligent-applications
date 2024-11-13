@@ -1,5 +1,5 @@
 name: Continuous integration
-run-name: Continuous integration - ${{ github.ref }} ${{ github.head_ref }}
+run-name: Continuous integration - ${{ github.ref }} (${{ github.head_ref }})
 
 on:
   pull_request:
@@ -37,7 +37,7 @@ jobs:
           echo "Semantic Kernel files changed: ${{ steps.changed_files.outputs.semantic_kernel_any_changed }}"
 
   build_dotnet_semantic_kernel:
-    if: ${{ needs.check_for_changed_files.outputs.semantic_kernel_changed == 'true' }}
+    #if: ${{ needs.check_for_changed_files.outputs.semantic_kernel_changed == 'true' }}
     name: Build .NET Semantic Kernel solution
     needs: check_for_changed_files
     uses: ./.github/workflows/build-dotnet-semantic-kernel.yml
