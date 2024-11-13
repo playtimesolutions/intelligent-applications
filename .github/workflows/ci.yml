@@ -31,7 +31,8 @@ jobs:
 
       - name: Changes detected
         run: |
-          echo "Semantic Kernel files changed: ${{ steps.changed-files.outputs.semantic_kernel_any_changed }}"
+          echo "Semantic Kernel files changed: ${{ steps.changed_files.outputs.semantic_kernel_any_changed }}"
+          echo "Semantic Kernel files changed count: ${{ steps.changed_files.outputs.semantic_kernel_all_changed_files_count }}"
 
   output_state:
     needs: check_for_changed_files
