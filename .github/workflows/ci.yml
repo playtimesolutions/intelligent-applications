@@ -1,9 +1,12 @@
 name: Continuous integration
-run-name: Continuous integration
+run-name: Continuous integration - ${{ github.ref }} (${{ github.head_ref }})
 
 on:
-  workflow_dispatch:
   pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   check_for_changed_files:

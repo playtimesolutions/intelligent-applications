@@ -1,5 +1,4 @@
 name: Build .NET Semantic Kernel solution
-run-name: Build .NET Semantic Kernel solution
 
 on:
   workflow_call:
