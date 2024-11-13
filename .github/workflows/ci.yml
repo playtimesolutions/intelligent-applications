@@ -38,8 +38,13 @@ jobs:
     needs: check_for_changed_files
     runs-on: ubuntu-latest
     steps:
-      - name: Output state
-        run: echo state <${{ needs.check_for_changed_files.outputs.semantic_kernel_changed }}>
+      - env:
+          OUTPUT1: ${{needs.check_for_changed_files.outputs.semantic_kernel_changed}}
+
+        name: Output state
+        run: |
+          echo state <"${{ needs.check_for_changed_files.outputs.semantic_kernel_changed }}">
+          echo OUTPUT1 <"$OUTPUT1">
 
   build_dotnet_semantic_kernel:
     if: ${{ needs.check_for_changed_files.outputs.semantic_kernel_changed == 'true' }}
