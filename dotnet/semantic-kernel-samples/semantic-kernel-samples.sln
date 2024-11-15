@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplePlugin", "src\SimpleP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplePrompt", "src\SimplePrompt\SimplePrompt.csproj", "{D2D84A92-61A1-4C5C-8445-0DE53587EC14}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimplePromptTemplate", "src\SimplePromptTemplate\SimplePromptTemplate.csproj", "{AEDC4C95-9E63-455F-8744-50AC0446C77C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D2D84A92-61A1-4C5C-8445-0DE53587EC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2D84A92-61A1-4C5C-8445-0DE53587EC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2D84A92-61A1-4C5C-8445-0DE53587EC14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEDC4C95-9E63-455F-8744-50AC0446C77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEDC4C95-9E63-455F-8744-50AC0446C77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEDC4C95-9E63-455F-8744-50AC0446C77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEDC4C95-9E63-455F-8744-50AC0446C77C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
